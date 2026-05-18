@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Games Hub</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#0f0f0f;
+        color:white;
+    }
+
+  
+    .hero{
+        height:100vh;
+        background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+        url('Gamepads.jpg');
+        background-size:cover;
+        background-position:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:20px;
+    }
+
+    .hero-content h1{
+        font-size:70px;
+        color:#ffd700;
+        text-shadow:0 0 20px black;
+    }
+
+    .hero-content p{
+        font-size:24px;
+        margin-top:15px;
+        color:#ddd;
+    }
+
+  
+    .games{
+        padding:60px 40px;
+    }
+
+    .games h2{
+        text-align:center;
+        font-size:40px;
+        margin-bottom:40px;
+        color:#ffd700;
+    }
+
+    .games-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+        gap:30px;
+    }
+
+    .card{
+        background:#1a1a1a;
+        border-radius:15px;
+        overflow:hidden;
+        transition:0.3s;
+        box-shadow:0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+        box-shadow:0 0 25px rgba(255,215,0,0.4);
+    }
+
+    .card img{
+        width:100%;
+        height:350px;
+        object-fit:cover;
+    }
+
+    .card h3{
+        padding:20px;
+        font-size:24px;
+        color:#ffd700;
+    }
+
+    footer{
+        text-align:center;
+        padding:20px;
+        background:#111;
+        color:#888;
+    }
+
+    .description{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.92);
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    opacity:0;
+    transition:0.4s;
+    font-size:17px;
+    line-height:1.5;
+}
+
+.card:hover .description{
+    opacity:1;
+}
+
+.card.active .description{
+    opacity:1;
+}
+</style>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fantasy Games Hub</h1>
+        <p>Najlepsze gry Souls-like i RPG</p>
+    </div>
+</section>
+
+
+<section class="games">
+    <h2>Popularne Gry</h2>
+
+    <div class="games-grid">
+
+        <div class="card">
+            <img src="Dark_Souls_Remastered.webp" alt="Dark Souls Remastered">
+            <h3>Dark Souls Remastered</h3>
+
+            <div class="description">
+                Mroczne RPG akcji stworzone przez FromSoftware.
+                Gra oferuje wymagające walki, potężnych bossów
+                oraz ogromny świat fantasy pełen tajemnic.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Dark Souls 2.webp" alt="Dark Souls 2">
+            <h3>Dark Souls 2 Scholar of the First Sin</h3>
+
+            <div class="description">
+                Rozbudowana odsłona serii Dark Souls z nowymi
+                przeciwnikami, wymagającymi lokacjami i
+                klimatycznym światem pełnym niebezpieczeństw.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Dark Souls 3.webp" alt="Dark Souls 3">
+            <h3>Dark Souls 3 The Ringed City</h3>
+
+            <div class="description">
+                Dynamiczny souls-like z epickimi walkami,
+                mrocznym klimatem oraz jednymi z najlepszych
+                bossów w całej serii.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Elden Ring.webp" alt="Elden Ring">
+            <h3>Elden Ring Shadow of the Erdtree</h3>
+
+            <div class="description">
+                Ogromne RPG akcji z otwartym światem,
+                eksploracją, magią i wymagającymi przeciwnikami.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Bloodborne.avif" alt="Bloodborne">
+            <h3>Bloodborne</h3>
+
+            <div class="description">
+                Gotycki horror akcji z szybką walką,
+                mroczną atmosferą i przerażającymi bestiami.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Lord of the Fallen 2023.jpg" alt="Lord of the Fallen 2023">
+            <h3>Lord of the Fallen 2023</h3>
+
+            <div class="description">
+                Mroczny souls-like z dwoma światami:
+                krainą żywych i umarłych pełną potworów.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Hellpoint.avif" alt="Hellpoint">
+            <h3>Hellpoint</h3>
+
+            <div class="description">
+                Futurystyczny souls-like science fiction
+                z eksploracją kosmicznej stacji i horroru.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Nioh.jpg" alt="Nioh">
+            <h3>Nioh</h3>
+
+            <div class="description">
+                Samurajskie RPG akcji z demonami Yokai,
+                dynamiczną walką i rozbudowanym ekwipunkiem.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Nioh 2.jpeg" alt="Nioh 2">
+            <h3>Nioh 2</h3>
+
+            <div class="description">
+                Jeszcze bardziej dynamiczna odsłona Nioh
+                z nowymi mocami demonów i bossami.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Lies of P.jpg" alt="Lies of P">
+            <h3>Lies of P</h3>
+
+            <div class="description">
+                Mroczna interpretacja historii Pinokia
+                w klimacie steampunkowego souls-like.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Wo Long Fallen Dynasty.jpeg" alt="Wo Long Fallen Dynasty">
+            <h3>Wo Long Fallen Dynasty</h3>
+
+            <div class="description">
+                Chińskie fantasy inspirowane historią Trzech Królestw
+                z szybką i widowiskową walką.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Horizon Zero Dawn.jpeg" alt="Horizon Zero Dawn">
+            <h3>Horizon Zero Dawn</h3>
+
+            <div class="description">
+                RPG akcji z otwartym światem, robotycznymi bestiami
+                i futurystycznym klimatem postapokalipsy.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Dragon's Dogma Dark Arisen.jpg" alt="Dragon's Dogma Dark Arisen">
+            <h3>Dragon's Dogma Dark Arisen</h3>
+
+            <div class="description">
+                Klasyczne RPG fantasy z ogromnym światem,
+                smokami oraz widowiskową walką.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Monster Hunter World.jpeg" alt="Monster Hunter">
+            <h3>Monster Hunter World: Iceborne</h3>
+
+            <div class="description">
+                Polowanie na gigantyczne potwory,
+                crafting oraz kooperacyjna rozgrywka online.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Clair Obscur Expedition 33.avif" alt="Clair Obscur">
+            <h3>Clair Obscur: Expedition 33</h3>
+            <div class="description">
+                Stylowe RPG fantasy z tajemniczą historią,
+                eksploracją i wymagającymi przeciwnikami.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Valheim.jpg" alt="Valheim">
+            <h3>Valheim</h3>
+            
+            <div class="description">
+                Survival w świecie Wikingów z budowaniem,
+                craftingiem oraz walką z bossami.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Enshrouded.jpg" alt="Enshrouded">
+            <h3>Enshrouded</h3>
+
+            <div class="description">
+                Fantasy survival RPG z eksploracją,
+                budowaniem baz i magicznym światem.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Lord of the Fallen.jpg" alt="Lord of the Fallen">
+            <h3>Lord of the Fallen</h3>
+
+            <div class="description">
+                Klasyczny mroczny action RPG z trudnymi walkami
+                i gotycką atmosferą fantasy.
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="The Surge 2.avif" alt="The Surge 2">
+            <h3>The Surge 2</h3>
+
+            <div class="description">
+                Futurystyczny souls-like science fiction
+                z brutalną walką i cybernetycznymi przeciwnikami.
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="Enotria The Last Song.webp" alt="Enotria">
+            <h3>Enotria: The Last Song</h3>
+
+            <div class="description">
+                Włoski souls-like inspirowany folklorem
+                i klimatem renesansowej Italii.
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="DarksidersII.jpg" alt="DarksidersII">
+            <h3>DarksidersII</h3>
+
+            <div class="description">
+                Dynamiczne RPG akcji z apokaliptycznym światem,
+                zagadkami oraz walką wręcz.
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="DarksidersIII.jpg" alt="DarksidersIII">
+            <h3>DarksidersIII</h3>
+
+            <div class="description">
+                Mroczna kontynuacja Darksiders z otwartym światem
+                i dynamiczną walką jako Fury.
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="Remnant From the Ashes.jpg" alt="Remnant From the Ashes">
+            <h3>Remnant: From the Ashes</h3>
+
+            <div class="description">
+                Shooter souls-like z kooperacją,
+               proceduralnymi lokacjami i potężnymi bossami.
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="The Surge.jpeg" alt="The Surge">
+            <h3>The Surge</h3>
+
+            <div class="description">
+                Brutalny science fiction souls-like
+                z walką wręcz oraz cybernetycznymi implantami.
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Fantasy Games Hub
+</footer>
+
+</body>
+</html>
